@@ -1,0 +1,132 @@
+/* Global reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Navbar styles */
+.n-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent;
+    color: #0c0b0b;
+    padding: 15px 30px;
+    font-family: Arial, sans-serif;
+    font-weight: 900;
+}
+
+.n-left {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.n-name {
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.n-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.n-list ul {
+    list-style-type: none;
+    display: flex;
+}
+
+.n-list ul li {
+    margin-right: 20px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.n-list ul li:hover {
+    color: var(--orange);
+}
+
+.button {
+    padding: 8px 16px;
+    background-color: var(--orange);
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+    .n-wrapper {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    .n-left,
+    .n-right {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .n-list {
+        width: 100%;
+        text-align: center;
+    }
+
+    .n-list ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .n-list ul li {
+        margin: 10px 0;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .n-wrapper {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    .n-left,
+    .n-right {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .n-list {
+        width: 80%;
+        text-align: center;
+    }
+
+    .n-list ul {
+        position: relative;
+        flex-direction: column;
+        left:-3rem;
+        top: 2rem;
+    }
+
+    .n-list ul li {
+        margin: 10.5px 0;
+    }
+    .button{
+      position: relative;
+        left: -7.5rem;
+        top: -9.5rem;
+       
+    }
+    .n-list ul li {
+        position: relative;
+        left: 5rem;
+    }
+    .toggle{
+        position: relative;
+        left: -3rem;
+        top: 2rem;
+    }
+}

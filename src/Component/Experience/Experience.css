@@ -1,0 +1,158 @@
+/* Base position */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Base styles */
+.section-heading4 {
+  position: absolute;
+  color: var(--yellow);
+  font-weight: 900;
+  font-size: bold;
+  font-size: 30px;
+  left: 20px;
+  top: 1rem;
+}
+
+/* Base positioning for Experience section */
+.Experience {
+  position: relative;
+  font-size: 28px;
+  font-weight: bold;
+  top: 25rem;
+  /* Adjust this value as needed */
+}
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.timeline-box {
+  width: 70vw;
+  left: 3rem;
+  margin-right: 6rem;
+  margin-top: 4rem;
+  max-width: 550px;
+  margin-bottom: 40px;
+  position: relative;
+  animation: fade-in 5s ease-in-out forwards, slide-back 0.6s ease-in-out 2s forwards;
+  opacity: 0;
+  transform-origin: center;
+  transition: transform cubic-bezier(0.55, 0.055, 0.675, 0.19) ease-in-out;
+}
+
+.timeline-box:hover {
+  transform: scale(1.05);
+  /* Scale up on hover */
+}
+
+.timeline-box:nth-child(even) {
+  align-self: flex-end;
+  /* Align even boxes to the right */
+}
+
+.timeline-box:nth-child(odd) {
+  align-self: flex-start;
+  /* Align odd boxes to the left */
+}
+
+.timeline-head {
+  background-color: #f4f4f4;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.timeline-head h1 {
+  font-size: 24px;
+  margin-bottom: 5px;
+}
+
+.timeline-head h4,
+.timeline-head h6 {
+  color: #888;
+  margin: 5px 0;
+}
+
+.timeline-body {
+  padding: 20px;
+  border-left: 4px solid #ccc;
+}
+
+.timeline-body p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Animation */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.95);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes slide-back {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+
+  /* Adjust the position and width for smaller screens */
+  #Experience {
+    top: 24rem;
+    /* Adjust position for smaller screens */
+  }
+
+  .timeline-box {
+    width: 90%;
+    max-width: 400px;
+    /* Adjust width for smaller screens */
+    top: -0.5rem;
+    /* Adjust position for smaller screens */
+  }
+
+  /* Ensure the section heading remains responsive */
+  .section-heading {
+    margin-top: 3rem;
+    /* Adjust the margin for smaller screens */
+  }
+}
+
+@media screen and (max-width: 480px) {
+
+  /* Adjust the position and width for smaller screens */
+  #Experience {
+    top: 43rem;
+    /* Adjust position for smaller screens */
+  }
+
+  .timeline-box {
+    width: 90%;
+    max-width: 400px;
+    /* Adjust width for smaller screens */
+    top: -0.5rem;
+    /* Adjust position for smaller screens */
+  }
+
+  /* Ensure the section heading remains responsive */
+  .section-heading {
+    margin-top: 3rem;
+    /* Adjust the margin for smaller screens */
+  }
+}

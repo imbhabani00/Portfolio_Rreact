@@ -1,0 +1,60 @@
+/* FlotingDiv Component Styles */
+.floatingDiv1 {
+    position: absolute;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: var(--boxShadow);
+    border-radius: 19px;
+    padding: 0px 28px;
+    height: 2.5rem;
+    width: 12rem;
+    left: 15rem;
+    top: 1rem;
+    border: 2px solid rgb(63, 23, 150);
+    transition: all 0.3s ease; /* Animation transition */
+}
+
+.floatingDiv1 > img {
+    transform: scale(0.7);
+}
+
+.floatingDiv1 > span {
+    font-family: sans-serif;
+    font-size: 16px;
+    font-weight: 900;
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 768px) {
+    .floatingDiv1 {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+
+    .floatingDiv1 > img {
+        transform: scale(0.5); /* Adjust image size for responsiveness */
+    }
+
+    .floatingDiv1 > span {
+        font-size: 14px; /* Adjust font size for smaller screens */
+    }
+}
+
+/* Animation */
+@keyframes floatAnimation {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* Apply animation to the floatingDiv */
+.floatingDiv1 {
+    animation: floatAnimation 3s ease-in-out infinite; /* Apply animation to this element */
+}

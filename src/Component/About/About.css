@@ -1,0 +1,90 @@
+.section-heading2 {
+    position: absolute;
+    left: 1rem;
+    top: 32rem;
+    color: var(--yellow);
+    font-size: 30px;
+    font-weight: 900;
+}
+
+.About {
+    color: rgb(41, 39, 39);
+    font-weight: 900;
+    margin-top: 25rem;
+    /* Adjusted margin for better positioning */
+    text-align: center;
+}
+
+.Aboutt {
+    top: 1.5rem;
+    margin-left: 5rem;
+    margin-right: 5rem;
+    position: relative;
+    /* Changed to relative positioning */
+    height: auto;
+    /* Allowing height to adjust based on content */
+    padding: 2rem;
+    /* Added padding for better spacing */
+    border: 4px solid var(--yellow);
+    animation: borderAnimation 5s infinite alternate;
+}
+
+.About>h2 {
+    font-size: 1.3rem;
+    text-align: left;
+    font-weight: 900;
+}
+
+span {
+    color: var(--yellow);
+}
+
+@keyframes borderAnimation {
+
+    0%,
+    100% {
+        border-width: 4px;
+        border-color: black;
+    }
+
+    50% {
+        border-width: 8px;
+        border-color: var(--yellow);
+    }
+}
+
+/* Existing styles remain unchanged */
+
+/* Responsive Adjustments */
+@media screen and (max-width: 768px) {
+    #About {
+        font-size: 1.8rem;
+        /* Adjusted font size for smaller screens */
+        margin-top: 3rem;
+        /* Changed margin top for better positioning */
+    }
+
+    .About {
+        padding: 1.5rem;
+        /* Adjusted padding for smaller screens */
+    }
+
+    .About>h2 {
+        font-size: 1.1rem;
+        /* Adjusted font size for smaller screens */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .section-heading2 {
+        position:relative;
+        top: -9rem;
+        left: -9rem;
+    }
+    .Aboutt{
+        top: -7rem;
+        left: -4.8rem;
+        height: 30rem;
+        width: 18rem;
+    }
+}

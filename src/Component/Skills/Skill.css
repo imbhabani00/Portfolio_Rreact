@@ -1,0 +1,140 @@
+.section-heading3 {
+    position: absolute;
+    top: 2rem;
+    color: var(--yellow);
+    font-weight: 900;
+    font-size: bold;
+    font-size: 30px;
+    left: 20px;
+}
+
+.Skills {
+    position: relative;
+    padding: 3rem 0;
+    top: 2.5rem;
+}
+
+.ii-button {
+    position: absolute;
+    border-radius: 50px 50px;
+    width: 15rem;
+    top: 23rem;
+    left: 23rem;
+}
+
+.section-heading {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+}
+
+
+.section-heading i {
+    margin-right: 0.5rem;
+}
+
+#skills-container {
+    position: absolute;
+    top: 6rem;
+    left: 5rem;
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 1rem;
+    /* Improved spacing between skill items */
+}
+
+.skill-progress {
+    width: calc(30% - 1rem);
+    /* Adjusted width for responsiveness */
+    min-width: 180px;
+    height: auto;
+    border-radius: 55px;
+    background-color: #8c5bc8;
+    margin-bottom: 2rem;
+    overflow: hidden;
+    /* Hide overflowing content */
+    transition: transform 0.5s ease-in-out;
+    /* Added transition for smoother hover effect */
+}
+
+.skill-progress:hover {
+    transform: scale(1.05);
+    /* Scale up on hover */
+}
+
+.skill-progress>div {
+    border-radius: 25px 0 0 25px;
+    box-shadow: 4px 0px 4px 0px rgb(16, 15, 15);
+    transition: width 0.5s ease-in-out;
+    /* Transition width changes */
+}
+
+.skill-percent {
+    width: 0;
+    /* Initially, the width is 0 */
+}
+
+.eighty-five-percent {
+    width: 85%;
+    /* Modify width as per the skill level */
+}
+
+/* Different background colors for skills */
+#skill-1,
+#skill-2,
+#skill-3,
+#skill-4,
+#skill-5,
+#skill-6,
+#skill-7,
+#skill-8,
+#skill-9 {
+    background-color: #b49dd0;
+}
+
+.skill-name {
+    margin-left: 10px;
+    color: rgb(12, 7, 7);
+    font-size: 1.1rem;
+    font: bold;
+    font-weight: 900;
+    line-height: 1.8rem;
+}
+
+@media screen and (max-width: 768px) {
+    #skills {
+        top: 2rem;
+        /* Adjust position for smaller screens */
+    }
+
+    .ii-button {
+        top: 32rem;
+        left: 45%;
+        /* Adjust positioning for smaller screens */
+        transform: translateX(-50%);
+    }
+
+    .skill-progress {
+        width: calc(50% - 1rem);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #skills {
+        top: 2rem;
+        /* Adjust position for even smaller screens */
+    }
+
+    .ii-button {
+        top: 50rem;
+        left: 13rem;
+    }
+
+    .skill-progress {
+        width: 70%;
+        margin-left: -70px;
+    }
+}

@@ -1,0 +1,192 @@
+/* General Intro Styles */
+.intro {
+    display: flex;
+    flex-wrap: wrap;
+    height: auto;
+    margin-top: 1.5rem;
+}
+
+/* Left Side Styles */
+.i-left {
+    display: flex;
+    position: relative;
+    flex: 1;
+    flex-direction: column;
+    margin: 2rem;
+    max-width: 50%;
+    /* Adjust as needed */
+}
+
+.i-name {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 1rem;
+}
+
+.i-name> :nth-child(1) {
+    color: var(--black);
+    font-weight: bold;
+    font-size: 3rem;
+}
+
+.i-name> :nth-child(2) {
+    color: var(--orange);
+    font-weight: bold;
+    font-size: 3rem;
+}
+
+.i-name> :nth-child(3) {
+    font-weight: 100;
+    font-size: 14px;
+    color: var(--gray);
+    margin-top: 10px;
+}
+
+.i-button {
+    position: absolute;
+    width: 6rem;
+    height: 2rem;
+    top: 14rem;
+    left: 7rem;
+}
+
+.i-icons {
+    position: absolute;
+    display: flex;
+    gap: 0;
+    top: 17.5rem;
+    left: 3.5rem;
+}
+
+.i-icons>* {
+    transform: scale(0.6);
+}
+
+.i-icons>*:hover {
+    cursor: pointer;
+}
+
+.i-icons img {
+    margin-right: 2rem;
+}
+
+/* Right Side Styles */
+.i-right {
+    flex: 1;
+    position: relative;
+    max-width: 50%;
+    /* Adjust as needed */
+}
+
+.i-right>* {
+    position: absolute;
+    top: 2rem;
+    z-index: 1;
+}
+
+.i-right> :nth-child(1) {
+    transform: scale(0.47);
+    left: -15%;
+    top: -13rem;
+}
+
+.i-right> :nth-child(2) {
+    transform: scale(0.5);
+    top: -4rem;
+    left: 12%;
+}
+
+.i-right> :nth-child(3) {
+    transform: scale(0.42);
+    top: 13rem;
+    left: -8%;
+}
+
+.i-right> :nth-child(4) {
+    transform: scale(1.5);
+    top: 3rem;
+    left: 3rem;
+}
+
+/* Blurred Circles Styles */
+.blur {
+    position: absolute;
+    width: 12rem;
+    height: 8rem;
+    border-radius: 50%;
+    background: rgb(30, 151, 216);
+    filter: blur(65px);
+    z-index: -9;
+    left: 14rem;
+}
+
+.blur2 {
+    background: rgb(130, 111, 237);
+    position: absolute;
+    width: 25rem;
+    height: 15rem;
+    border-radius: 50%;
+    filter: blur(72px);
+    top: 13rem;
+    left: -7rem;
+}
+
+/* Existing styles remain unchanged */
+
+/* Responsive Adjustments */
+@media screen and (max-width: 768px) {
+
+    .i-left,
+    .i-right {
+        max-width: 100%;
+        margin: 1rem;
+        text-align: center;
+    }
+
+    .i-right {
+        display: none;
+        /* Hide the right side content on small screens */
+    }
+
+    .i-name,
+    .i-button,
+    .i-icons {
+        position: static;
+        /* Reset position for smaller screens */
+        width: 100%;
+        /* Occupy full width */
+        max-width: none;
+        /* Remove max-width restriction */
+        margin: 1rem 0;
+        /* Adjust margins for better spacing */
+        text-align: center;
+        /* Center align the content */
+    }
+
+    .blur,
+    .blur2 {
+        display: none;
+        /* Hide blurred circles on small screens */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .intro{
+        position: relative;
+        top: -3rem;
+        left: -1.3rem;
+    }
+    .i-icons{
+        margin-left: 5rem;
+    }
+    .i-button{
+        display: none;
+    }
+    .bio{
+        position: relative;
+        left: 0.5rem;
+        width: 90vw;
+        font: bold;
+    }
+}

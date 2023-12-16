@@ -1,0 +1,112 @@
+/* Base position */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Base styles */
+.section-heading5 {
+  color: var(--yellow);
+  font-size: 30px;
+  font-weight: 900;
+  margin-left: 1rem;
+  margin-top: 2rem;
+}
+
+/* Base positioning for Education section */
+.Education {
+  position: relative;
+  font-size: 28px;
+  font-weight: bold;
+  top: 23rem;
+  /* Adjust this value as needed */
+}
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  margin-top: -3rem;
+}
+
+.timeline-box {
+
+  width: 80%;
+  max-width: 600px;
+  margin-bottom: 40px;
+  position: relative;
+  animation: fade-in 0.6s ease-in-out forwards;
+  opacity: 0;
+  transform-origin: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.timeline-box:hover {
+  transform: scale(1.05);
+  /* Scale up on hover */
+}
+
+.timeline-head {
+  background-color: #f4f4f4;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.timeline-head h1 {
+  font-size: 24px;
+  margin-bottom: 5px;
+}
+
+.timeline-head h4,
+.timeline-head h6 {
+  color: #888;
+  margin: 5px 0;
+}
+
+.timeline-body {
+  padding: 20px;
+  border-left: 2px solid #ccc;
+}
+
+.timeline-body p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Animation */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.95);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+
+  /* Adjust the position and width for smaller screens */
+  #education {
+    top: 50rem;
+    /* Adjust position for smaller screens */
+  }
+
+  .timeline-box {
+    width: 90%;
+    max-width: 400px;
+    /* Adjust width for smaller screens */
+    top: 30rem;
+    /* Adjust position for smaller screens */
+  }
+
+  /* Ensure the section heading remains responsive */
+  .section-heading {
+    margin-top: 3rem;
+    /* Adjust the margin for smaller screens */
+  }
+}
